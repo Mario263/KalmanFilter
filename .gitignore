@@ -1,0 +1,45 @@
+# Secrets
+.env
+.env.*
+.claude
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environment
+.venv/
+venv/
+
+# Training artifacts
+models/
+logs/
+results/
+
+# Downloaded / generated data (re-fetch via scripts/download_dukascopy_xauusd.py)
+data/
+
+# Nautilus backtest outputs
+nautilus/*_metrics.json
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+kalmanFilter/docs/
+
+*.md
+*.log

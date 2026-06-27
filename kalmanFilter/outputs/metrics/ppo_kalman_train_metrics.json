@@ -1,0 +1,13 @@
+{
+  "gate": "E",
+  "data_path_proof": "C:\\Users\\Abhishek Sharma\\Desktop\\Tushar\\KKL new\\kalmanFilter\\outputs\\data\\xauusd_1d_kalman_input.csv",
+  "input_csv_sha256": "3b3d9d82d9ecd7be66f53cd1315ec1c2465ba1bd7b8b080e1c079d577dd5d477",
+  "runtime_config": "C:\\Users\\Abhishek Sharma\\Desktop\\Tushar\\KKL new\\kalmanFilter\\outputs\\diagnostics\\effective_kalman_runtime_config.json",
+  "model_path": "C:\\Users\\Abhishek Sharma\\Desktop\\Tushar\\KKL new\\kalmanFilter\\outputs\\models\\ppo_xauusd_kalman_1d.zip",
+  "model_exists": true,
+  "smoke": false,
+  "timesteps_arg": null,
+  "device": "cpu",
+  "train_log": "C:\\Users\\Abhishek Sharma\\Desktop\\Tushar\\KKL new\\kalmanFilter\\outputs\\diagnostics\\kalman_train.log",
+  "note": "Only difference vs Raw PPO is Kalman-filtered OHLC input; hyperparameters unchanged."
+}

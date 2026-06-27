@@ -1,0 +1,21 @@
+{
+  "final_equity_abs_diff": 0.0013988310092827305,
+  "cum_return_abs_diff": 3.887556166004558e-05,
+  "round_trips": {
+    "env": 32,
+    "nautilus": 32
+  },
+  "action_counts": {
+    "env": {
+      "sell": 9,
+      "hold": 463,
+      "buy": 55
+    },
+    "nautilus": {
+      "sell": 9,
+      "hold": 464,
+      "buy": 55
+    }
+  },
+  "obs_identical_by_construction": true
+}

@@ -1,0 +1,84 @@
+{
+  "gate_a": {
+    "config_path": "C:\\Users\\Abhishek Sharma\\Desktop\\Tushar\\KKL new\\config\\experiment_dukascopy_1d.json",
+    "csv_path": "data/dukascopy/xauusd_1d.csv",
+    "skip_resample": true,
+    "timeframe": "1d",
+    "train_end": "2022-12-31",
+    "test_start": "2023-01-01",
+    "eval_start": "2023-01-02",
+    "eval_end": "2024-09-12",
+    "feature_count": 22,
+    "feature_order": [
+      "open",
+      "high",
+      "low",
+      "close",
+      "volume",
+      "sma10",
+      "sma20",
+      "sma50",
+      "ema12",
+      "ema26",
+      "macd_line",
+      "macd_signal",
+      "rsi14",
+      "stoch_k",
+      "stoch_d",
+      "boll_upper",
+      "boll_lower",
+      "atr14",
+      "obv",
+      "vwap",
+      "cci",
+      "williams_r"
+    ],
+    "feature_order_matches_expected": true,
+    "zscore_window": 252,
+    "problems": [],
+    "gate_a_pass": true
+  },
+  "data": {
+    "csv_path": "data/dukascopy/xauusd_1d.csv",
+    "sha256": "5ea1d8f3c7e80188c36ffb15561cc451c698d723ef8b11bcd8db530b3164e6fc",
+    "rows": 2514,
+    "date_min": "2017-01-02 00:00:00+00:00",
+    "date_max": "2025-01-31 00:00:00+00:00",
+    "duplicate_timestamps": 0,
+    "monotonic_increasing": true,
+    "columns": {
+      "open": {
+        "nan": 0,
+        "min": 1150.0,
+        "max": 2795.948,
+        "le_zero": 0
+      },
+      "high": {
+        "nan": 0,
+        "min": 1152.472,
+        "max": 2816.935,
+        "le_zero": 0
+      },
+      "low": {
+        "nan": 0,
+        "min": 1146.039,
+        "max": 2790.895,
+        "le_zero": 0
+      },
+      "close": {
+        "nan": 0,
+        "min": 1150.361,
+        "max": 2798.085,
+        "le_zero": 0
+      },
+      "volume": {
+        "nan": 0,
+        "min": 0.167655,
+        "max": 214.103624,
+        "le_zero": 0
+      }
+    },
+    "train_rows_for_qr": 1865,
+    "test_rows_untouched": 649
+  }
+}

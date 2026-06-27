@@ -1,0 +1,55 @@
+{
+  "kalman_env": {
+    "n_periods": 527,
+    "cumulative_return": 0.11103874398831026,
+    "cagr": 0.0516390788135066,
+    "sharpe": 0.8588039516356155,
+    "sortino": 0.4914642571788927,
+    "calmar": 0.7561495877978432,
+    "recovery_factor": 1.625937224782371,
+    "max_drawdown": -0.06829214701273145,
+    "var_95": -0.0006712060986201471,
+    "win_rate": 0.06641366223908918,
+    "active_win_rate": 0.546875,
+    "trade_win_rate": 0.53125,
+    "round_trips": 32,
+    "final_equity": 111103.87439883103,
+    "total_turnover": 64,
+    "long_frac": 0.10436432637571158,
+    "flat_frac": 0.8785578747628083,
+    "short_frac": 0.017077798861480076
+  },
+  "raw_baseline": {
+    "n_periods": 527,
+    "cumulative_return": 0.20871600000000057,
+    "cagr": 0.09487788963605182,
+    "sharpe": 1.1666241493789902,
+    "sortino": 1.1154220986350136,
+    "calmar": 0.8910792765860556,
+    "recovery_factor": 1.9602301759172542,
+    "max_drawdown": -0.10647525100073296,
+    "var_95": -0.004500465843676779,
+    "win_rate": 0.1062618595825427,
+    "active_win_rate": 0.5233644859813084,
+    "trade_win_rate": 0.7222222222222222,
+    "round_trips": 18,
+    "final_equity": 120871.60000000005,
+    "total_turnover": 36,
+    "long_frac": 0.1859582542694497,
+    "flat_frac": 0.7969639468690702,
+    "short_frac": 0.017077798861480076
+  },
+  "paper_target": {
+    "cumulative_return": 0.1539,
+    "cagr": 0.06,
+    "sharpe": 0.69,
+    "max_drawdown": -0.1122,
+    "win_rate": 0.5016
+  },
+  "eval_window": [
+    "2023-01-02",
+    "2024-09-12"
+  ],
+  "obs_dim": 22,
+  "n_eval_bars": 528
+}

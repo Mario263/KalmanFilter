@@ -1,0 +1,81 @@
+{
+  "config": "C:\\Users\\Abhishek Sharma\\Desktop\\Tushar\\KKL new\\kalmanFilter\\outputs\\diagnostics\\effective_kalman_runtime_config.json",
+  "model_path": "C:\\Users\\Abhishek Sharma\\Desktop\\Tushar\\KKL new\\kalmanFilter\\outputs\\models\\ppo_xauusd_kalman_1d",
+  "eval_window": [
+    "2023-01-02",
+    "2024-09-12"
+  ],
+  "timeframe": "1d",
+  "lots_per_trade": 1.0,
+  "trade_oz": 100.0,
+  "nautilus": {
+    "n_periods": 527,
+    "cumulative_return": 0.11107761954997031,
+    "cagr": 0.0516566742542417,
+    "sharpe": 0.8589369305717911,
+    "sortino": 0.48835458344605726,
+    "calmar": 0.756726258896412,
+    "recovery_factor": 1.6271924722731435,
+    "max_drawdown": -0.06826335632858349,
+    "var_95": -0.0006712234283168583,
+    "win_rate": 0.06641366223908918,
+    "active_win_rate": 0.546875,
+    "trade_win_rate": 0.53125,
+    "round_trips": 32,
+    "final_equity": 111103.87300000002,
+    "total_turnover": 64,
+    "long_frac": 0.10436432637571158,
+    "flat_frac": 0.8785578747628083,
+    "short_frac": 0.017077798861480076,
+    "min_equity": 99996.4998349993,
+    "nonpositive_periods": 0
+  },
+  "rl_env": {
+    "n_periods": 527,
+    "cumulative_return": 0.11103874398831026,
+    "cagr": 0.0516390788135066,
+    "sharpe": 0.8588039516356155,
+    "sortino": 0.4914642571788927,
+    "calmar": 0.7561495877978432,
+    "recovery_factor": 1.625937224782371,
+    "max_drawdown": -0.06829214701273145,
+    "var_95": -0.0006712060986201471,
+    "win_rate": 0.06641366223908918,
+    "active_win_rate": 0.546875,
+    "trade_win_rate": 0.53125,
+    "round_trips": 32,
+    "final_equity": 111103.87439883103,
+    "total_turnover": 64,
+    "long_frac": 0.10436432637571158,
+    "flat_frac": 0.8785578747628083,
+    "short_frac": 0.017077798861480076
+  },
+  "paper_target": {
+    "cumulative_return": 0.1539,
+    "cagr": 0.06,
+    "sharpe": 0.69,
+    "max_drawdown": -0.1122,
+    "win_rate": 0.5016
+  },
+  "nautilus_engine": {
+    "trade_stats": {
+      "round_trips": 32,
+      "win_rate": 0.53125,
+      "profit_factor": 1.523991136813476
+    },
+    "n_fills": 64,
+    "n_bars": 528,
+    "bars_processed": 528,
+    "obs_hit": 528,
+    "obs_miss": 0,
+    "orders_submitted": 64,
+    "actions": {
+      "sell": 9,
+      "hold": 464,
+      "buy": 55
+    },
+    "max_abs_position_oz": 100.0
+  },
+  "starting_usd": 100000.0,
+  "final_usd": 111103.87300000002
+}

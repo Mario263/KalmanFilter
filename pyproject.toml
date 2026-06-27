@@ -1,0 +1,19 @@
+[project]
+name = "rl-gold-trading"
+version = "0.1.0"
+description = "PPO Raw baseline for XAU/USD with optional Nautilus Trader backtest"
+requires-python = ">=3.10"
+dependencies = [
+    "stable-baselines3",
+    "gymnasium",
+    "torch",
+    "pandas",
+    "numpy",
+    "ta",
+    "datasets",
+    "nautilus-trader==1.202.0",
+    "rich",
+]
+
+[tool.uv]
+dev-dependencies = []

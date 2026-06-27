@@ -1,0 +1,101 @@
+{
+  "experiment": {
+    "name": "ppo_raw_xauusd_dukascopy_1d",
+    "model_name": "ppo_xauusd_dukascopy_1d",
+    "paper": "Kili et al., Kalman-Enhanced DRL for Gold Markets, IJACSA 16(11), 2025",
+    "baseline": "PPO Raw (no Kalman, no DQN, no RPPO)",
+    "deviations": [
+      "Native Dukascopy D1 bars (no resampling, paper-aligned daily)"
+    ]
+  },
+  "data": {
+    "csv_path": "data/dukascopy/xauusd_1d.csv",
+    "hf_dataset": "ZombitX64/xauusd-gold-price-historical-data-2004-2025",
+    "start": "2017-01-01",
+    "end": "2025-02-01",
+    "resample_rule": "1D",
+    "skip_resample": true,
+    "timeframe": "1d",
+    "train_end": "2022-12-31",
+    "test_start": "2023-01-01",
+    "eval_start": "2023-01-02",
+    "eval_end": "2024-09-12"
+  },
+  "env": {
+    "initial_capital": 100000.0,
+    "lots_per_trade": 1.0,
+    "contract_oz_per_lot": 100.0,
+    "commission_per_lot_round_trip": 7.0,
+    "commission": 0.0,
+    "spread": 0.0,
+    "alpha": 1.0,
+    "beta": 2.0,
+    "gamma": 0.5,
+    "delta": 0.1,
+    "action_space": "Discrete(3)",
+    "actions": {"sell": -1, "hold": 0, "buy": 1},
+    "reward_formula": "alpha*Return - beta*Drawdown - gamma*Cost + delta*Stability"
+  },
+  "train": {
+    "total_timesteps": 500000,
+    "smoke_timesteps": 20000,
+    "learning_rate": 0.0003,
+    "lr_linear_decay": true,
+    "n_steps": 2048,
+    "batch_size": 256,
+    "n_epochs": 10,
+    "gamma": 0.99,
+    "gae_lambda": 0.95,
+    "clip_range": 0.2,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "net_arch": [512, 512, 256, 128],
+    "activation": "tanh",
+    "seed": 42,
+    "save_dir": "models",
+    "device": "cuda",
+    "validation_enabled": true,
+    "validation_every_epoch": false,
+    "validation_log_dir": "logs/dukascopy_1d",
+    "train_log_file": "logs/dukascopy_1d_train.log"
+  },
+  "features": {
+    "count": 22,
+    "zscore_window": 252,
+    "zscore_note": "252 trading days (1-year causal window, paper-aligned)",
+    "order": [
+      "open", "high", "low", "close", "volume",
+      "sma10", "sma20", "sma50",
+      "ema12", "ema26",
+      "macd_line", "macd_signal",
+      "rsi14",
+      "stoch_k", "stoch_d",
+      "boll_upper", "boll_lower",
+      "atr14",
+      "obv",
+      "vwap",
+      "cci",
+      "williams_r"
+    ]
+  },
+  "metrics": {
+    "periods_per_year": 252
+  },
+  "paper_target": {
+    "cumulative_return": 0.1539,
+    "cagr": 0.06,
+    "sharpe": 0.69,
+    "max_drawdown": -0.1122,
+    "win_rate": 0.5016
+  },
+  "nautilus": {
+    "starting_usd": 100000.0,
+    "fee": 0.00015,
+    "venue": "SIM",
+    "symbol": "XAU/USD",
+    "default_leverage": 2,
+    "model_path": "models/dukascopy_1d/ppo_xauusd_dukascopy_1d",
+    "metrics_output": "nautilus/dukascopy_1d_metrics.json"
+  }
+}
