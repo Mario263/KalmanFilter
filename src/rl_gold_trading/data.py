@@ -46,7 +46,11 @@ def _standardize(df: pd.DataFrame) -> pd.DataFrame:
         df["volume"] = 0.0
     df = df.dropna(subset=["open", "high", "low", "close"])
     df = df.sort_values("datetime").drop_duplicates("datetime").set_index("datetime")
-    return df[["open", "high", "low", "close", "volume"]]
+    keep = ["open", "high", "low", "close", "volume"]
+    if "raw_close" in df.columns:                 # Kalman raw-price basis: real tradeable close
+        df["raw_close"] = pd.to_numeric(df["raw_close"], errors="coerce")
+        keep.append("raw_close")
+    return df[keep]
 
 
 def _resample(df: pd.DataFrame, rule: str) -> pd.DataFrame:

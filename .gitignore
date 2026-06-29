@@ -43,3 +43,8 @@ kalmanFilter/docs/
 
 *.md
 *.log
+
+*.pdf
+
+kalmanFilter/ablation/
+*.json

@@ -53,7 +53,11 @@ def add_features(df: pd.DataFrame) -> Tuple[pd.DataFrame, List[str]]:
     # Preserve the RAW (un-normalized) close for the env's P&L price path.
     # `close` itself is one of the 22 features and WILL be z-scored downstream;
     # `price` must stay in real price units.
-    out["price"] = out["close"]
+    # PnL/reward/equity/fills must mark on the RAW TRADEABLE close. If a `raw_close`
+    # column is present (Kalman pipeline injects it), use it so denoised features
+    # never leak into the price path; the Raw baseline has no `raw_close` -> `close`
+    # (which is already the raw close there). Backward-compatible.
+    out["price"] = out["raw_close"] if "raw_close" in out.columns else out["close"]
 
     out = out.dropna(subset=FEATURE_ORDER).copy()
     return out, list(FEATURE_ORDER)
