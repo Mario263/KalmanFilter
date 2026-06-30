@@ -1,0 +1,9 @@
+metric,raw,kalman,delta,winner
+cumulative_return,0.436235,0.240656,-0.195579,Raw
+sharpe,1.228297,0.670506,-0.55779,Raw
+sortino,1.546239,0.735285,-0.810954,Raw
+calmar,1.57934,0.638221,-0.941119,Raw
+max_drawdown,-0.11967,-0.170189,-0.050519,Kalman
+trade_win_rate,0.637931,0.552941,-0.08499,Raw
+round_trips,58,85,27,Kalman
+final_equity,143623.5,124065.6,-19557.9,Raw
